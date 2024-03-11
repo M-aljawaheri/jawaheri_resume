@@ -14,3 +14,5 @@ https://m-aljawaheri.github.io/jawaheri_resume/
 Is a persistent link to my resume.
 
 To update it, All I have to do is push my .tex changes to github which will trigger a CI/CD pipeline that builds the new tex to pdf.
+
+Try it out.
