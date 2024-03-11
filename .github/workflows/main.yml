@@ -1,0 +1,38 @@
+name: Update Resume PDF
+on: push
+jobs:
+  generate_and_commit_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build . -t resume-builder-image
+
+      - name: Run Docker container
+        run: docker run --name resume-builder-container resume-builder-image
+
+      - name: Copy generated PDF from the container
+        run: docker cp resume-builder-container:/data/main.pdf ./main.pdf
+
+      - name: Commit files
+        id: commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions"
+          git add main.pdf
+          if [ -z "$(git status --porcelain)" ]; then
+             echo "No changes to commit."
+             echo "::set-output name=push::false"
+          else
+             git commit -m "Updated Resume via GitHub Actions."
+             echo "::set-output name=push::true"
+          fi
+        shell: bash
+
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
