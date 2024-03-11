@@ -1,4 +1,4 @@
-name: Update Resume PDF
+name: Build LaTeX resume PDF
 on: push
 jobs:
   generate_and_commit_pdf:
