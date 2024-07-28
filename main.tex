@@ -20,6 +20,17 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -112,7 +123,7 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Mohammed Al-Jawaheri} \\ \vspace{1pt}
+    \textbf{\Huge \scshape \href{www.mjawaheri.com}{Mohammed Al-Jawaheri}} \\ \vspace{1pt}
     \href{mailto:x@x.com}{\underline{mobj@cmu.edu}} $|$ 
     \href{https://linkedin.com/in/mohammed-al-jawaheri}{\underline{linkedin.com/in/mohammed-al-jawaheri}} $|$
     \href{https://github.com/M-aljawaheri}{\underline{github.com/M-aljawaheri}}
@@ -140,9 +151,18 @@
 %-----------EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Backend Engineer}{Sep 2023 \-- Present}
+    {Software Engineer Intern}{May 2024 \-- Aug 2024}
+    {Openstack swift Nvidia}{}
+    \resumeItemListStart
+        \resumeItem{ Landed patches that were approved by project nvidia technical lead and merged upstream}
+        \resumeItem{ Added Quota support features that prevent operators from cluster abuse }
+        \resumeItem{ Added modern recon features for container reaper }
+        \resumeItem{ Currently improving concurrency in the container sharder daemon }
+    \resumeItemListEnd
+      
+    \resumeSubheading
+      {Backend Engineer}{Sep 2023 \-- Feb 2024}
       {Hungry Mushrooms Game studio}{}
       \resumeItemListStart
         \resumeItem{Architected a backend migration for three games from previous backends/adhoc firebase storage }
@@ -156,13 +176,13 @@
         \resumeItem{Graded and created exams for undergraduate courses on Computer systems, Operating systems and Algorithms}
     \resumeItemListEnd
 
-    \resumeSubheading
-      {Undergraduate Research Assistant}{May 2021 \-- Sep 2021}
-      {Carnegie Mellon University}{}
-      \resumeItemListStart
-        \resumeItem{Contributed to research software for Teams of aquatic robots for marine environmental monitoring}
-        \resumeItem{Simulated robot squad communication in both 4G/Wifi in NS3 before deployment}
-      \resumeItemListEnd
+%    \resumeSubheading
+%      {Undergraduate Research Assistant}{May 2021 \-- Sep 2021}
+%      {Carnegie Mellon University}{}
+%      \resumeItemListStart
+%        \resumeItem{Contributed to research software for Teams of aquatic robots for marine environmental monitoring}
+%        \resumeItem{Simulated robot squad communication in both 4G/Wifi in NS3 before deployment}
+%      \resumeItemListEnd
 
 % -----------Multiple Positions Heading-----------
 %    \resumeSubSubheading
@@ -181,6 +201,13 @@
 %-----------PROJECTS-----------
 \section{Projects and Achievements}
     \resumeSubHeadingListStart
+\resumeProjectHeading
+          {\textbf{\href{www.mjawaheri.com}{mjawaheri.com}: Personal Website} $|$ \emph{NextJS/ChakraUI}}{Apr 2023 \-- Present}
+          \resumeItemListStart
+          \resumeItem{Personal portfolio built using Next 14}
+          \resumeItem{Uses ChakraUI for smooth animations \& page transitions }
+          \resumeItemListEnd
+          
       \resumeProjectHeading
           {\textbf{HyperOS: OS \& hypervisor} $|$ \emph{C/x86}}{Aug 2022 \-- Jan 2023}
           \resumeItemListStart
@@ -188,6 +215,13 @@
           \resumeItem{Supported Paravirtualization interface for running guest kernels}
           \resumeItem{Implemented user-space multi-threading, and user-space hardware   exception handling}
           \resumeItem{Packaged with custom made user-space thread library and synchronization primitives}
+          \resumeItemListEnd
+
+\resumeProjectHeading
+          {\textbf{Connect4} $|$ \emph{Javascript (Matter.js), Python (django)}}{Mar 2021 \-- May 2021}
+          \resumeItemListStart
+            \resumeItem{Real-time online turn based connect-4, physics simulated pieces}
+            \resumeItem{Django 3.x backend, Django channels for websockets}
           \resumeItemListEnd
       
       \resumeProjectHeading
@@ -199,20 +233,13 @@
           \resumeItemListEnd
 
 
-      \resumeProjectHeading
-          {\textbf{FileStack: Distributed Filesystem} $|$ \emph{Java}}{Jan 2022 \-- May 2022}
-          \resumeItemListStart
-            \resumeItem{Developed a Java RMI library and used it to implement a FS inspired by HDFS and GFS}
-            \resumeItem{Implemented locking and a basic invalidation-based replication mechanism}
-          \resumeItemListEnd
+%      \resumeProjectHeading
+%          {\textbf{FileStack: Distributed Filesystem} $|$ \emph{Java}}{Jan 2022 \-- May 2022}
+%          \resumeItemListStart
+%            \resumeItem{Developed a Java RMI library and used it to implement a FS inspired by HDFS and GFS}
+%            \resumeItem{Implemented locking and a basic invalidation-based replication mechanism}
+%          \resumeItemListEnd
 
-
-      \resumeProjectHeading
-          {\textbf{Connect4} $|$ \emph{Javascript (Matter.js), Python (django)}}{Mar 2021 \-- May 2021}
-          \resumeItemListStart
-            \resumeItem{Real-time online turn based connect-4, physics simulated pieces}
-            \resumeItem{Django 3.x backend, Django channels for websockets}
-          \resumeItemListEnd
 
     \resumeSubHeadingListEnd
 
@@ -232,13 +259,13 @@
     
 %
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: C/C++17, x86/x86-64 Assembly, ARM Assembly, Java, Javascript, Python, SML.} \\
-     \textbf{Developer Tools}{: Git, Docker, Simics, GDB, CMake} \\
-    }}
- \end{itemize}
+%\section{Technical Skills}
+% \begin{itemize}[leftmargin=0.15in, label={}]
+%    \small{\item{
+%     \textbf{Languages}{: C/C++17, x86/x86-64 Assembly, ARM Assembly, Java, Javascript, Python, SML.} \\
+%     \textbf{Developer Tools}{: Git, Gerrit, Docker, Simics, GDB, CMake} \\
+%    }}
+% \end{itemize}
 
 
 %-------------------------------------------
