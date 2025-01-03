@@ -19,6 +19,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
+\usepackage{phonenumbers}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -123,126 +124,90 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape \href{www.mjawaheri.com}{Mohammed Al-Jawaheri}} \\ \vspace{1pt}
-    \href{mailto:x@x.com}{\underline{mobj@cmu.edu}} $|$ 
-    \href{https://linkedin.com/in/mohammed-al-jawaheri}{\underline{linkedin.com/in/mohammed-al-jawaheri}} $|$
-    \href{https://github.com/M-aljawaheri}{\underline{github.com/M-aljawaheri}}
+    \textbf{\large \scshape Mohammed Al-Jawaheri} \\ \vspace{1pt}
+       Doha, Qatar $|$ \texttt{+974-50767877}  $|$ mjawaheri02@gmail.com $|$
+    \href{https://linkedin.com/in/mohammed-al-jawaheri}{linkedin} $|$
+    \href{https://github.com/M-aljawaheri}{github}
 \end{center}
-
-
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Carnegie Mellon University}{}
       {B.S. in Computer Science, Concentration in Computer systems}{}
-      \\ \hfill \phantom{phantom} \hfill May 2023\;\;    \\
-    \resumeSubheading  
-      {Relevant Coursework:}{\textbf{GPA: 3.93/4.00}}
-      {}{Dean's List (8/8 semesters)}
-    \textbf{15-410 -} Operating Systems Design \& Implementation \\
-    \textbf{15-411 -} Compiler Design \& Implementation\\
-    \textbf{15-440 -} Distributed Systems	\\
-    \textbf{15-441 -} Computer Networks\\
-    \textbf{15-445 -} Database Systems\\
+      \\ \hfill \phantom{phantom} \hfill May 2025\;\;    \\
 
   \resumeSubHeadingListEnd
-
 %-----------EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-    {Software Engineer Intern}{May 2024 \-- Aug 2024}
-    {Openstack swift Nvidia}{}
+    {Software Engineer Intern}{May 2024 -- Aug 2024}
+    {OpenStack Swift, NVIDIA}{}
     \resumeItemListStart
-        \resumeItem{ Landed patches that were approved by project nvidia technical lead and merged upstream}
-        \resumeItem{ Added Quota support features that prevent operators from cluster abuse }
-        \resumeItem{ Added modern recon features for container reaper }
-        \resumeItem{ Currently improving concurrency in the container sharder daemon }
+        \resumeItem{Landed \href{https://review.opendev.org/c/openstack/swift/+/921664}{patches} approved by project leads and merged upstream to \href{https://github.com/openstack/swift/commit/6105b38e65b00c23d373e17ad9f89e4243395165}{OpenStack Swift}.}
+        \resumeItem{Added quota support features to prevent cluster abuse, enhancing system reliability.}
+        \resumeItem{Implemented modern recon features for the container reaper, optimizing performance.}
+        \resumeItem{Improved concurrency in the container sharder daemon.}
     \resumeItemListEnd
       
     \resumeSubheading
-      {Backend Engineer}{Sep 2023 \-- Feb 2024}
-      {Hungry Mushrooms Game studio}{}
+      {Backend Engineer}{Sep 2023 -- Feb 2024}
+      {Hungry Mushrooms Game Studio}{}
       \resumeItemListStart
-        \resumeItem{Architected a backend migration for three games from previous backends/adhoc firebase storage }
-        \resumeItem{Overlooking live migration of player nosql data to cockroachdb}
+        \resumeItem{Architected a backend migration for three games from previous backends and ad-hoc Firebase storage, improving scalability and performance.}
+        \resumeItem{Oversaw live migration of player NoSQL data to CockroachDB, ensuring data integrity and minimal downtime.}
+        \resumeItem{Collaborated with game developers to optimize backend services for enhanced player experiences.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Teaching Assistant}{Aug 2023 \-- Present}
+      {Teaching Assistant}{Aug 2023 -- Present}
       {Carnegie Mellon University}{}
       \resumeItemListStart
-        \resumeItem{Graded and created exams for undergraduate courses on Computer systems, Operating systems and Algorithms}
+        \resumeItem{Graded and created exams for undergraduate courses on Computer Networks, including assignments on building web servers with WSGI support for Flask and other frameworks.}
+        \resumeItem{Assisted students in understanding complex networking concepts and debugging challenging problems.}
     \resumeItemListEnd
-
-%    \resumeSubheading
-%      {Undergraduate Research Assistant}{May 2021 \-- Sep 2021}
-%      {Carnegie Mellon University}{}
-%      \resumeItemListStart
-%        \resumeItem{Contributed to research software for Teams of aquatic robots for marine environmental monitoring}
-%        \resumeItem{Simulated robot squad communication in both 4G/Wifi in NS3 before deployment}
-%      \resumeItemListEnd
-
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
   \resumeSubHeadingListEnd
-
-      
 
 %-----------PROJECTS-----------
 \section{Projects and Achievements}
     \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{HyperOS: Operating System \& Hypervisor} $|$ \emph{C/x86 Assembly}}{Aug 2022 -- Jan 2023}
+          \resumeItemListStart
+          \resumeItem{Built a fully preemptive multitasking kernel on real x86 hardware using C and x86 Assembly.}
+          \resumeItem{Supported paravirtualization interfaces for running guest kernels, enhancing system versatility.}
+          \resumeItem{Implemented user-space multithreading and hardware exception handling.}
+          \resumeItem{Developed custom user-space thread libraries and synchronization primitives, optimizing performance.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{C0++: Type-Inferring Optimizing Compiler} $|$ \emph{C++17, Flex/Bison}}{Aug 2021 -- Jan 2022}
+          \resumeItemListStart
+            \resumeItem{Built a compiler for a C-like language targeting x86-64 architecture.}
+            \resumeItem{Implemented optimizations such as partial redundancy elimination and strength reductions.}
+            \resumeItem{Utilized SSA form, achieving performance competitive with GCC -O1 on various benchmarks.}
+            \resumeItem{Demonstrated strong problem-solving skills in compiler design and code optimization.}
+          \resumeItemListEnd
+
+
 \resumeProjectHeading
-          {\textbf{\href{www.mjawaheri.com}{mjawaheri.com}: Personal Website} $|$ \emph{NextJS/ChakraUI}}{Apr 2023 \-- Present}
+          {\textbf{Personal Website} $|$ \emph{NextJS/ChakraUI} (\href{www.mjawaheri.com}{mjawaheri.com})}{Apr 2023 \-- Present}
           \resumeItemListStart
           \resumeItem{Personal portfolio built using Next 14}
           \resumeItem{Uses ChakraUI for smooth animations \& page transitions }
           \resumeItemListEnd
-          
+        
+
       \resumeProjectHeading
-          {\textbf{HyperOS: OS \& hypervisor} $|$ \emph{C/x86}}{Aug 2022 \-- Jan 2023}
+          {\textbf{Liso: HTTP/HTTPS Web Server} $|$ \emph{C}}{Jan 2022 -- May 2022}
           \resumeItemListStart
-          \resumeItem{Built a fully pre-emptive multi-tasking kernel on real x86 hardware}
-          \resumeItem{Supported Paravirtualization interface for running guest kernels}
-          \resumeItem{Implemented user-space multi-threading, and user-space hardware   exception handling}
-          \resumeItem{Packaged with custom made user-space thread library and synchronization primitives}
+            \resumeItem{Built a multiplexing HTTP and HTTPS web server in C, supporting HTTP parsing, CGI, WSGI, and TLS connections.}
+            \resumeItem{Optimized for high concurrency and performance, stress-tested using Siege and ApacheBench benchmarks.}
           \resumeItemListEnd
-
-\resumeProjectHeading
-          {\textbf{Connect4} $|$ \emph{Javascript (Matter.js), Python (django)}}{Mar 2021 \-- May 2021}
-          \resumeItemListStart
-            \resumeItem{Real-time online turn based connect-4, physics simulated pieces}
-            \resumeItem{Django 3.x backend, Django channels for websockets}
-          \resumeItemListEnd
-      
-      \resumeProjectHeading
-          {\textbf{C0++: Type inferring optimizing compiler} $|$ \emph{C++17, Flex/Bison}}{Aug 2021 \-- Jan 2022}
-          \resumeItemListStart
-            \resumeItem{Built a compiler for a C-like language targeting x86-64}
-            \resumeItem{Implemented optimizations such as partial redundancy elim. and str. reductions }
-            \resumeItem{SSA-based, competitive with GCC -O1 on many benchmarks}
-          \resumeItemListEnd
-
-
-%      \resumeProjectHeading
-%          {\textbf{FileStack: Distributed Filesystem} $|$ \emph{Java}}{Jan 2022 \-- May 2022}
-%          \resumeItemListStart
-%            \resumeItem{Developed a Java RMI library and used it to implement a FS inspired by HDFS and GFS}
-%            \resumeItem{Implemented locking and a basic invalidation-based replication mechanism}
-%          \resumeItemListEnd
 
 
     \resumeSubHeadingListEnd
-
 %
 %----------- Honors and Awards-----------
 \section{Honors and Awards}
@@ -251,7 +216,8 @@
      \textbf{Andrew Carnegie Society Scholar}{ Recognition by CMU to 40 exemplary students} \\
      \textbf{Qatar Campus Scholar}{ Recognition given by CMU-Q  given to one graduate of each major} \\
     \textbf{Best Freshman Team}{ prize at CarnegieApps Hackathon 2020}
-        }
+        } \\
+    \textbf{QCPC 2021 winner} { Competed in QCPC, ACPC }
     }
  \end{itemize}
 
